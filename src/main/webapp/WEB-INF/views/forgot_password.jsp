@@ -29,7 +29,9 @@
                                 <div class="text-danger mt-2">${EmailNotExist}</div>
                             </c:if>
                         </div>
-
+                        <div>
+                        <label>Forget Password</label>
+                        </div>
                         <!-- Submit Button -->
                         <div class="d-grid">
                             <button type="submit" class="btn btn-primary">Send OTP</button>
