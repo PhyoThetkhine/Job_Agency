@@ -56,6 +56,7 @@ public class RegistrationController {
 	     
 	        if (userService.checkEmail(user.getEmail())) {
 	            mav.setViewName("register");
+	            System.out.println("Hello World");
 	            mav.addObject("EmailExist", "Email already registered.");
 	            return mav;
 	        }
