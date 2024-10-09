@@ -31,7 +31,7 @@ public class CompanyRepository {
 	            pstmt.setString(5, company.getPhone());       // Phone
 	            pstmt.setString(6, company.getIndustry());      // Gender
 	            pstmt.setString(7, company.getNo_of_employees()); 
-	            pstmt.setInt(8, company.getLocation_id().getLocation_id()); 
+	          //  pstmt.setInt(8, company.getLocation_id().getLocation_id()); 
 
 	        return pstmt.executeUpdate(); 
 

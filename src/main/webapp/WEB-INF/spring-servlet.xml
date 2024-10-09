@@ -28,6 +28,5 @@
 </bean>
 
     <!-- Mapping static resources -->
-    <mvc:resources mapping="/resources/**" location="/resources/" />
   
 </beans>
