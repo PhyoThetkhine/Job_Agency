@@ -39,5 +39,9 @@ public class UserService {
 	 public void updatePassword(String email, String hashedPassword) {
 		    userRepository.updatePassword(email, hashedPassword);
 		}
+	 
+	 public User findUserByID(int id) { //for profile
+		 return userRepository.findUserByID(id);
+	 }
 	
 }

@@ -1,0 +1,16 @@
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/model/Company.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/emailService/OtpStorageService.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/model/User.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/configuration/MailConfig.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/configuration/WebConfig.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/controller/RegistrationController.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/emailService/EmailService.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/model/LoginBean.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/controller/HomeController.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/configuration/CloudinaryConfig.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/repository/CompanyRepository.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/repository/MyConnection.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/repository/UserRepository.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/controller/LoginController.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/emailService/OtpService.java
+/Users/phyothetkhine/Documents/GitHub/Job_Agency/src/main/java/job_agency/service/UserService.java

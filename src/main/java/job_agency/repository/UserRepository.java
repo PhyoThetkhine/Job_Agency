@@ -100,6 +100,35 @@ public class UserRepository {
 	
 	 }
 	 
+//	 public User findUserByID(int id) {
+//		 String sql = "SELECT * FROM user WHERE id = ?";
+//		    try (Connection conn = MyConnection.getConnection();
+//		         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+//
+//		        pstmt.setInt(1, id);
+//		        try (ResultSet rs = pstmt.executeQuery()) {
+//		            if (rs.next()) {
+//		                User user = new User();
+//		                user.setFirst_name(rs.getString("first_name"));
+//		                user.setLast_name(rs.getString("last_name"));
+//		                user.setEmail(rs.getString("email"));
+//		                user.setPassword(rs.getString("password"));  // hashed password
+//		                user.setAge(rs.getInt("age"));
+//		                user.setGender(rs.getString("gender"));
+//		                user.setRole(rs.getString("role"));
+//		                user.setUser_photo_URL(rs.getString("user_photo_URL"));
+//		                
+//		                return user;
+//		            }
+//		        }
+//		    } catch (SQLException e) {
+//		        System.out.println("Error finding user by email: " + e.getMessage());
+//		    }
+//		    return null;
+//		}
+//	 
+	 
+	 
 	 
 	 public User findUserByEmail(String email) {
 		    String sql = "SELECT * FROM user WHERE email = ?";
@@ -114,6 +143,10 @@ public class UserRepository {
 		                user.setLast_name(rs.getString("last_name"));
 		                user.setEmail(rs.getString("email"));
 		                user.setPassword(rs.getString("password"));  // hashed password
+		                user.setAge(rs.getInt("age"));
+		                user.setGender(rs.getString("gender"));
+		                user.setRole(rs.getString("role"));
+	                user.setUser_photo_URL(rs.getString("user_photo_URL"));
 		                return user;
 		            }
 		        }
