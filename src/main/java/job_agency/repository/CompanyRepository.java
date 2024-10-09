@@ -9,13 +9,15 @@ import org.springframework.stereotype.Repository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import job_agency.model.Company;
-import job_agency.model.User;
+
+
+
 
 @Repository
 public class CompanyRepository {
 	
 	public int insertCompany(Company company) {
-	    String sql = "INSERT INTO company (email, password, main_contact_name, company_name, phone,industry,number_of_employes) VALUES (?, ?, ?, ?, ?, ?, ?)";
+	    String sql = "INSERT INTO company (email, password, main_contact_name, company_name, phone,industry,number_of_employes,) VALUES (?, ?, ?, ?, ?, ?, ?,?)";
 	    try (Connection conn = MyConnection.getConnection();
 	         PreparedStatement pstmt = conn.prepareStatement(sql)) {
 	    	
@@ -29,6 +31,7 @@ public class CompanyRepository {
 	            pstmt.setString(5, company.getPhone());       // Phone
 	            pstmt.setString(6, company.getIndustry());      // Gender
 	            pstmt.setString(7, company.getNo_of_employees()); 
+	            pstmt.setInt(8, company.getLocation_id().getLocation_id()); 
 
 	        return pstmt.executeUpdate(); 
 
@@ -37,6 +40,8 @@ public class CompanyRepository {
 	        return 0;  
 	    }
 	}
+	
+	
 	
 	 public boolean doesCompanyExist(String CompanyEmail) {
 	        String sql = "SELECT COUNT(*) FROM company WHERE email = ?";

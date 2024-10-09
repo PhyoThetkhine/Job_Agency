@@ -14,6 +14,6 @@ public class Company {
 	private String industry;
 	private String no_of_employees;
 	private String company_photo_URL;
-	private Location location_id;
+	
 	private MultipartFile company_photo_file;// to handel file
 }
