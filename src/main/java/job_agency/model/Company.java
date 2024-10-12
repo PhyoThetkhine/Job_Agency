@@ -11,9 +11,14 @@ public class Company {
 	private String main_contact_name;
 	private String company_name;
 	private String phone;
+	private String address;
+	private String city;
+	private String township;
+	private String state;
 	private String industry;
+	
 	private String no_of_employees;
 	private String company_photo_URL;
-	private Location location_id;
+	
 	private MultipartFile company_photo_file;// to handel file
 }

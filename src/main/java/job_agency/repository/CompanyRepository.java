@@ -15,21 +15,26 @@ import job_agency.model.User;
 public class CompanyRepository {
 	
 	public int insertCompany(Company company) {
-	    String sql = "INSERT INTO company (email, password, main_contact_name, company_name, phone,industry,number_of_employes) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO company (email, password, main_contact_name, company_name, phone, address,city,township,state, industry, number_of_employes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)";
 	    try (Connection conn = MyConnection.getConnection();
 	         PreparedStatement pstmt = conn.prepareStatement(sql)) {
-	    	
-	    	 BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-	            String hashedPassword = passwordEncoder.encode(company.getCompany_password());
+	    	BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+	        String encodedPassword = passwordEncoder.encode(company.getCompany_password());
+	        
+	    
 
 	            pstmt.setString(1, company.getCompany_email());  // First Name
-	            pstmt.setString(2, hashedPassword);   // Last Name
+	            pstmt.setString(2, encodedPassword);   // Last Name
 	            pstmt.setString(3, company.getMain_contact_name());       // Email
 	            pstmt.setString(4, company.getCompany_name());        // Password (hashed)
-	            pstmt.setString(5, company.getPhone());       // Phone
-	            pstmt.setString(6, company.getIndustry());      // Gender
-	            pstmt.setString(7, company.getNo_of_employees()); 
-
+	            pstmt.setString(5, company.getPhone()); 
+	            pstmt.setString(6, company.getAddress());
+	            pstmt.setString(7, company.getCity());
+	            pstmt.setString(8, company.getTownship());
+	            pstmt.setString(9, company.getState());
+	            pstmt.setString(10, company.getIndustry());      // Gender
+	            pstmt.setString(11, company.getNo_of_employees());
+	           
 	        return pstmt.executeUpdate(); 
 
 	    } catch (SQLException e) {

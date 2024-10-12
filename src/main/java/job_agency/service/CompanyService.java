@@ -33,7 +33,7 @@ public class CompanyService {
 		 return companyRepository.checkPhone(phone);
 	 }
 	 
-	 public Company findUserByEmail(String email) {
+	 public Company findCompanyByEmail(String email) {
 		    return companyRepository.findCompanyByEmail(email);
 		}
 	 public void updatePassword(String email, String hashedPassword) {
